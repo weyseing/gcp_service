@@ -1,0 +1,10 @@
+services:
+  gcp_service:
+    container_name: gcp_service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/apps/gcp_service
+    stdin_open: true
+    tty: true

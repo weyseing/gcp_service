@@ -1,0 +1,16 @@
+{
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "gcp_service",
+  "workspaceFolder": "/apps",
+  "overrideCommand": false,
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "xshrim.txt-syntax",
+        "googlecloudtools.cloudcode"
+      ]
+    }
+  },
+  "remoteUser": "appuser"
+}
