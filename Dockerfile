@@ -71,5 +71,8 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 USER appuser
 
+# Disable git pager
+RUN git config --global core.pager cat
+
 # Use entrypoint for auth and interactive shell
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

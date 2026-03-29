@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/apps/gcp_service/keys/key.json
     volumes:
       - .:/apps/gcp_service
     stdin_open: true
