@@ -57,9 +57,9 @@ ENV PATH="/home/appuser/.local/bin:${PATH}"
 # Required for GKE kubectl auth
 ENV USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-# Set the working directory
-WORKDIR /apps/cloudshell
-RUN chown appuser:appuser /apps/cloudshell
+# Set the working directory, pre-create mount points, and grant appuser ownership
+WORKDIR /apps
+RUN chown -R appuser:appuser /apps
 
 # Set terminal: color prompt + steady bar cursor
 RUN echo 'export PS1="\[\033[32m\]\u@\h:\[\033[38;2;30;144;255m\]\w\[\033[00m\]\$ "' >> /home/appuser/.bashrc \
